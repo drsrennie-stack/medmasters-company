@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MedMasters, Brand Family Reference</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&family=Manrope:wght@400;500;600;700&family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Anchor navy used across all three */
+    --anchor-navy: #0B1F3A;
+
+    /* Collaborative palette */
+    --col-navy: #0B1F3A;
+    --col-terra: #C56B51;
+    --col-sage: #8FA68E;
+    --col-gold: #C9A961;
+    --col-cream: #F8F5EE;
+
+    /* Launch Studio palette */
+    --ls-navy: #1A2B45;
+    --ls-terra: #C85A3D;
+    --ls-offwhite: #F7F3EC;
+
+    /* Method palette */
+    --mtd-graphite: #2D2D2A;
+    --mtd-sienna: #B85C20;
+    --mtd-sage: #7A8574;
+    --mtd-stone: #EFEAE0;
+    --mtd-paper: #F5F0E4;
+
+    /* Document neutrals */
+    --doc-bg: #F8F5EE;
+    --doc-ink: #1C1C1C;
+    --doc-white: #FFFFFF;
+    --doc-mid: #666;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Outfit', sans-serif;
+    background: var(--doc-bg);
+    color: var(--doc-ink);
+    line-height: 1.55;
+    padding: 56px 24px 96px;
+  }
+
+  .wrap { max-width: 1180px; margin: 0 auto; }
+
+  /* HERO */
+  .hero {
+    margin-bottom: 56px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(11,31,58,0.15);
+  }
+
+  .meta-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 22px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .doc-id {
+    font-family: 'Manrope', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--col-terra);
+    text-transform: uppercase;
+  }
+
+  .doc-version {
+    font-family: 'Manrope', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: var(--doc-mid);
+    text-transform: uppercase;
+  }
+
+  .hero h1 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 200;
+    font-size: clamp(42px, 7vw, 82px);
+    letter-spacing: -2px;
+    color: var(--anchor-navy);
+    line-height: 0.98;
+    margin-bottom: 20px;
+  }
+  .hero h1 em {
+    font-style: normal;
+    font-weight: 700;
+    color: var(--col-terra);
+  }
+
+  .hero .deck {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: #333;
+    max-width: 720px;
+    line-height: 1.5;
+  }
+
+  /* TOC */
+  .toc {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px 24px;
+    margin-top: 36px;
+    padding: 22px 0;
+    border-top: 1px solid rgba(11,31,58,0.12);
+    border-bottom: 1px solid rgba(11,31,58,0.12);
+  }
+
+  .toc-item {
+    font-family: 'Manrope', sans-serif;
+    font-size: 12.5px;
+    color: var(--doc-ink);
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+
+  .toc-num {
+    font-weight: 700;
+    color: var(--col-gold);
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+
+  /* SECTION */
+  section { margin-bottom: 72px; }
+
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+
+  .section-num {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+    font-size: 48px;
+    color: var(--col-gold);
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+
+  .section-label {
+    font-family: 'Manrope', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    color: var(--col-terra);
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+    font-size: clamp(28px, 3.5vw, 40px);
+    letter-spacing: -0.8px;
+    color: var(--anchor-navy);
+    line-height: 1.1;
+    margin-bottom: 18px;
+  }
+  h2 strong { font-weight: 700; color: var(--col-terra); }
+
+  .section-deck {
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    color: #444;
+    max-width: 740px;
+    margin-bottom: 32px;
+  }
+
+  /* LEGAL / STRUCTURE STRIP */
+  .structure-strip {
+    background: var(--anchor-navy);
+    color: var(--doc-white);
+    border-radius: 12px;
+    padding: 28px 32px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  @media (min-width: 820px) {
+    .structure-strip { grid-template-columns: 1fr 2fr; gap: 40px; align-items: center; }
+  }
+
+  .structure-strip .legal h3 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--col-gold);
+    margin-bottom: 4px;
+  }
+  .structure-strip .legal .sub {
+    font-family: 'Manrope', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,0.7);
+    text-transform: uppercase;
+  }
+
+  .structure-strip .dbas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  @media (max-width: 640px) {
+    .structure-strip .dbas { grid-template-columns: 1fr; }
+  }
+
+  .dba-chip {
+    padding: 12px 14px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 6px;
+    border-left: 2px solid var(--col-gold);
+  }
+  .dba-chip .type {
+    font-family: 'Manrope', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    color: var(--col-gold);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .dba-chip .name {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--doc-white);
+  }
+
+  /* DNA grid */
+  .dna-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  @media (min-width: 820px) { .dna-grid { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 1040px) { .dna-grid { grid-template-columns: repeat(4, 1fr); } }
+
+  .dna-card {
+    background: var(--doc-white);
+    border-left: 3px solid var(--col-gold);
+    padding: 20px 22px;
+    border-radius: 4px;
+  }
+
+  .dna-card .dna-n {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 32px;
+    color: var(--col-terra);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .dna-card h4 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--anchor-navy);
+    margin-bottom: 8px;
+    letter-spacing: -0.1px;
+  }
+
+  .dna-card p {
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px;
+    color: #555;
+    line-height: 1.5;
+  }
+
+  /* BRAND FULL CARDS */
+  .brand-full {
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 24px;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 900px) {
+    .brand-full { grid-template-columns: 1.5fr 1fr; }
+  }
+
+  .brand-full.col { background: var(--col-cream); }
+  .brand-full.ls { background: var(--ls-offwhite); }
+  .brand-full.mtd { background: var(--mtd-stone); }
+
+  .brand-showcase {
+    padding: 44px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 240px;
+  }
+
+  .brand-details {
+    background: rgba(255,255,255,0.7);
+    padding: 36px 34px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .brand-top {
+    border-bottom: 1px solid rgba(11,31,58,0.1);
+    padding-bottom: 14px;
+  }
+
+  .brand-tier {
+    font-family: 'Manrope', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .brand-full.col .brand-tier { color: var(--col-terra); }
+  .brand-full.ls .brand-tier { color: var(--ls-terra); }
+  .brand-full.mtd .brand-tier { color: var(--mtd-sienna); }
+
+  .brand-full-name {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: var(--anchor-navy);
+    letter-spacing: -0.4px;
+    line-height: 1.1;
+    margin-bottom: 4px;
+  }
+
+  .brand-full-audience {
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px;
+    color: var(--doc-mid);
+    font-style: italic;
+  }
+
+  .spec-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    font-size: 12.5px;
+    padding-bottom: 4px;
+  }
+  .spec-row .spec-k {
+    font-family: 'Manrope', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--doc-mid);
+    text-transform: uppercase;
+    min-width: 70px;
+    padding-top: 3px;
+  }
+  .spec-row .spec-v {
+    font-family: 'Outfit', sans-serif;
+    color: var(--anchor-navy);
+    text-align: right;
+    line-height: 1.4;
+    flex: 1;
+  }
+
+  .mini-palette {
+    display: flex;
+    gap: 3px;
+    height: 22px;
+    width: 100%;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .mini-palette div { flex: 1; }
+
+  /* SYSTEMS GRID */
+  .systems-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  @media (min-width: 860px) {
+    .systems-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  .system-card {
+    background: var(--doc-white);
+    border: 1px solid rgba(11,31,58,0.08);
+    border-radius: 10px;
+    padding: 26px 28px;
+  }
+
+  .system-card h3 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--anchor-navy);
+    margin-bottom: 16px;
+    letter-spacing: -0.2px;
+  }
+
+  .type-row {
+    padding: 12px 0;
+    border-bottom: 1px dashed rgba(11,31,58,0.12);
+  }
+  .type-row:last-child { border-bottom: none; padding-bottom: 0; }
+
+  .type-row .type-meta {
+    font-family: 'Manrope', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    color: var(--doc-mid);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .type-row .type-sample { color: var(--anchor-navy); }
+
+  .color-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+  .color-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .color-swatch {
+    aspect-ratio: 1;
+    border-radius: 4px;
+    border: 1px solid rgba(0,0,0,0.08);
+  }
+  .color-cell .color-hex {
+    font-family: 'Manrope', sans-serif;
+    font-size: 9.5px;
+    font-weight: 600;
+    color: var(--doc-mid);
+    letter-spacing: 0.3px;
+  }
+  .color-cell .color-name {
+    font-family: 'Outfit', sans-serif;
+    font-size: 10.5px;
+    color: var(--doc-ink);
+  }
+
+  .color-section {
+    margin-bottom: 20px;
+  }
+  .color-section:last-child { margin-bottom: 0; }
+  .color-section-label {
+    font-family: 'Manrope', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    color: var(--doc-mid);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  /* MARK SYSTEM */
+  .mark-trio {
+    background: var(--doc-white);
+    border-radius: 12px;
+    border: 1px solid rgba(11,31,58,0.1);
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  @media (min-width: 820px) {
+    .mark-trio { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .mark-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .mark-cell svg { margin-bottom: 16px; }
+
+  .mark-cell .m-name {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--anchor-navy);
+    letter-spacing: -0.1px;
+    margin-bottom: 2px;
+  }
+
+  .mark-cell .m-type {
+    font-family: 'Manrope', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    color: var(--doc-mid);
+    text-transform: uppercase;
+  }
+
+  /* USAGE */
+  .usage-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  @media (min-width: 820px) {
+    .usage-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .usage-card {
+    background: var(--doc-white);
+    border-radius: 10px;
+    padding: 22px 24px;
+    border-top: 4px solid;
+  }
+  .usage-card.col { border-top-color: var(--col-terra); }
+  .usage-card.ls { border-top-color: var(--ls-terra); }
+  .usage-card.mtd { border-top-color: var(--mtd-sienna); }
+
+  .usage-card h4 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--anchor-navy);
+    margin-bottom: 12px;
+  }
+
+  .usage-card .u-tagline {
+    font-family: 'Outfit', sans-serif;
+    font-style: italic;
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed rgba(11,31,58,0.12);
+  }
+
+  .usage-card ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .usage-card li {
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px;
+    color: #333;
+    padding: 5px 0 5px 16px;
+    position: relative;
+    line-height: 1.45;
+  }
+
+  .usage-card li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 13px;
+    width: 6px;
+    height: 1px;
+    background: var(--col-gold);
+  }
+
+  /* FOOTER */
+  footer {
+    margin-top: 64px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(11,31,58,0.12);
+    font-family: 'Manrope', sans-serif;
+    font-size: 11px;
+    color: var(--doc-mid);
+    letter-spacing: 0.5px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="meta-row">
+    <span class="doc-id">Brand Family Reference</span>
+    <span class="doc-version">Version 1.0, April 2026</span>
+  </div>
+
+  <h1>MedMasters,<br>a family of <em>three voices.</em></h1>
+  <p class="deck">One firm, one LLC, three brands. Each speaks to a different audience at a different register. What follows is the complete reference for how they relate, how they differ, and where each one belongs.</p>
+
+  <div class="toc">
+    <div class="toc-item"><span class="toc-num">01</span>Legal &amp; Structure</div>
+    <div class="toc-item"><span class="toc-num">02</span>Shared DNA</div>
+    <div class="toc-item"><span class="toc-num">03</span>The Three Brands</div>
+    <div class="toc-item"><span class="toc-num">04</span>Systems</div>
+    <div class="toc-item"><span class="toc-num">05</span>When to Use Which</div>
+  </div>
+</section>
+
+<!-- 01 LEGAL & STRUCTURE -->
+<section>
+  <div class="section-head">
+    <span class="section-num">01</span>
+    <span class="section-label">Legal &amp; Structure</span>
+  </div>
+  <h2>One <strong>LLC</strong>, three public-facing brands.</h2>
+  <p class="section-deck">All three brands operate under a single legal entity. Each runs publicly as a DBA (Doing Business As). Customers never see the shared plumbing; accountants, the IRS, and liability insurance do.</p>
+
+  <div class="structure-strip">
+    <div class="legal">
+      <h3>MedMasters Collaborative, LLC</h3>
+      <span class="sub">Legal entity, one EIN, one tax return</span>
+    </div>
+    <div class="dbas">
+      <div class="dba-chip">
+        <div class="type">DBA 01, Products</div>
+        <div class="name">MedMasters Collaborative</div>
+      </div>
+      <div class="dba-chip">
+        <div class="type">DBA 02, Services</div>
+        <div class="name">MedMasters Launch Studio</div>
+      </div>
+      <div class="dba-chip">
+        <div class="type">DBA 03, Method</div>
+        <div class="name">MedMasters Method</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 SHARED DNA -->
+<section>
+  <div class="section-head">
+    <span class="section-num">02</span>
+    <span class="section-label">Shared DNA</span>
+  </div>
+  <h2>What makes them a <strong>family</strong>.</h2>
+  <p class="section-deck">Four constants across all three brands. These are the identifiers that signal, at any level of recognition, that a piece belongs to the MedMasters family.</p>
+
+  <div class="dna-grid">
+    <div class="dna-card">
+      <div class="dna-n">i</div>
+      <h4>Parent naming</h4>
+      <p>Every brand leads with "MedMasters" and follows with one distinguishing word. The single strongest family signal, free to deploy.</p>
+    </div>
+    <div class="dna-card">
+      <div class="dna-n">ii</div>
+      <h4>Navy as anchor</h4>
+      <p>Deep navy appears in every brand. Dominant in Collaborative, supporting in Launch Studio, quiet in Method. The through-line color.</p>
+    </div>
+    <div class="dna-card">
+      <div class="dna-n">iii</div>
+      <h4>Rule of three</h4>
+      <p>Each mark uses three primary elements. Three circles, three triangles, three concentric rings. Different shapes, same grammar.</p>
+    </div>
+    <div class="dna-card">
+      <div class="dna-n">iv</div>
+      <h4>Modern sans</h4>
+      <p>Every brand uses a modern sans family. Display faces flex per brand; body weight and structure do not.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 03 THE THREE BRANDS -->
+<section>
+  <div class="section-head">
+    <span class="section-num">03</span>
+    <span class="section-label">The Three Brands</span>
+  </div>
+  <h2>Each brand, in <strong>full</strong>.</h2>
+  <p class="section-deck">Complete identity spec for each. Lockup, palette, typography, mark, tagline. The details that make each brand speak to its own audience without pretending to speak to all of them.</p>
+
+  <!-- COLLABORATIVE -->
+  <div class="brand-full col">
+    <div class="brand-showcase">
+      <svg viewBox="0 0 520 180" width="100%" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <clipPath id="rcA"><circle cx="78" cy="66" r="40"/></clipPath>
+          <clipPath id="rcB"><circle cx="116" cy="114" r="40"/></clipPath>
+        </defs>
+        <circle cx="78" cy="66" r="40" fill="#CC7C65"/>
+        <circle cx="116" cy="114" r="40" fill="#9CB09B"/>
+        <circle cx="58" cy="114" r="40" fill="#273951"/>
+        <g clip-path="url(#rcA)"><circle cx="116" cy="114" r="40" fill="#96A189"/></g>
+        <g clip-path="url(#rcA)"><circle cx="58" cy="114" r="40" fill="#212A3F"/></g>
+        <g clip-path="url(#rcB)"><circle cx="58" cy="114" r="40" fill="#1B3045"/></g>
+        <g clip-path="url(#rcA)"><g clip-path="url(#rcB)"><circle cx="58" cy="114" r="40" fill="#1B2E43"/></g></g>
+        <circle cx="85" cy="100" r="5" fill="#C9A961"/>
+        <text x="188" y="78" font-family="Outfit" font-weight="800" font-size="24" letter-spacing="-0.5">
+          <tspan fill="#C56B51">Med</tspan><tspan fill="#0B1F3A">Masters</tspan>
+        </text>
+        <text x="188" y="104" font-family="Outfit" font-weight="500" font-size="24" letter-spacing="-0.3" fill="#0B1F3A">Collaborative</text>
+        <text x="188" y="128" font-family="Manrope" font-weight="500" font-size="9" letter-spacing="2.4">
+          <tspan fill="#C56B51">LEARNING LAYERED BY DESIGN </tspan><tspan fill="#C9A961" font-size="10.5">&#8226;</tspan><tspan fill="#C56B51"> BUILT FOR TEAMS</tspan>
+        </text>
+      </svg>
+    </div>
+    <div class="brand-details">
+      <div class="brand-top">
+        <div class="brand-tier">Tier I, Products, for Learners</div>
+        <div class="brand-full-name">MedMasters Collaborative</div>
+        <div class="brand-full-audience">Warm, editorial, encouraging</div>
+      </div>
+      <div class="spec-row"><span class="spec-k">Mark</span><span class="spec-v">Three overlapping circles (Venn)</span></div>
+      <div class="spec-row"><span class="spec-k">Display</span><span class="spec-v" style="font-family:Outfit;font-weight:800;">Outfit ExtraBold 800</span></div>
+      <div class="spec-row"><span class="spec-k">Body</span><span class="spec-v">Outfit + Manrope</span></div>
+      <div class="spec-row"><span class="spec-k">Paper</span><span class="spec-v">Cream #F8F5EE</span></div>
+      <div class="spec-row"><span class="spec-k">Accent</span><span class="spec-v">Terra cotta + gold</span></div>
+      <div class="spec-row"><span class="spec-k">Palette</span><span class="spec-v">
+        <span class="mini-palette">
+          <div style="background:#0B1F3A;"></div>
+          <div style="background:#C56B51;"></div>
+          <div style="background:#8FA68E;"></div>
+          <div style="background:#C9A961;"></div>
+          <div style="background:#F8F5EE;"></div>
+        </span>
+      </span></div>
+      <div class="spec-row"><span class="spec-k">Tagline</span><span class="spec-v">Learning layered by design &middot; Built for teams</span></div>
+    </div>
+  </div>
+
+  <!-- LAUNCH STUDIO -->
+  <div class="brand-full ls">
+    <div class="brand-showcase">
+      <svg viewBox="0 0 520 180" width="100%" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="40,138 80,54 120,138" fill="#1A2B45"/>
+        <polygon points="60,146 100,62 140,146" fill="#C85A3D" opacity="0.92"/>
+        <polygon points="80,154 120,70 160,154" fill="#C85A3D" opacity="0.5"/>
+        <text x="188" y="80" font-family="Bebas Neue" font-size="34" letter-spacing="2.5" fill="#1A2B45">MEDMASTERS</text>
+        <text x="188" y="112" font-family="Bebas Neue" font-size="34" letter-spacing="2.5" fill="#C85A3D">LAUNCH STUDIO</text>
+        <text x="188" y="132" font-family="DM Sans" font-weight="600" font-size="9" letter-spacing="2.8" fill="#1A2B45">BUILT TO SHIP</text>
+      </svg>
+    </div>
+    <div class="brand-details">
+      <div class="brand-top">
+        <div class="brand-tier">Tier II, Services, for Clients</div>
+        <div class="brand-full-name">MedMasters Launch Studio</div>
+        <div class="brand-full-audience">Light, confident, ready to start</div>
+      </div>
+      <div class="spec-row"><span class="spec-k">Mark</span><span class="spec-v">Three ascending triangles</span></div>
+      <div class="spec-row"><span class="spec-k">Display</span><span class="spec-v" style="font-family:'Bebas Neue'; letter-spacing:1px; font-size:15px;">BEBAS NEUE</span></div>
+      <div class="spec-row"><span class="spec-k">Body</span><span class="spec-v" style="font-family:'DM Sans';">DM Sans</span></div>
+      <div class="spec-row"><span class="spec-k">Paper</span><span class="spec-v">Warm off-white #F7F3EC</span></div>
+      <div class="spec-row"><span class="spec-k">Accent</span><span class="spec-v">Terracotta</span></div>
+      <div class="spec-row"><span class="spec-k">Palette</span><span class="spec-v">
+        <span class="mini-palette">
+          <div style="background:#1A2B45;"></div>
+          <div style="background:#C85A3D;"></div>
+          <div style="background:#F7F3EC;border:1px solid rgba(0,0,0,0.08);"></div>
+        </span>
+      </span></div>
+      <div class="spec-row"><span class="spec-k">Tagline</span><span class="spec-v">Built to ship</span></div>
+    </div>
+  </div>
+
+  <!-- METHOD -->
+  <div class="brand-full mtd">
+    <div class="brand-showcase">
+      <svg viewBox="0 0 520 180" width="100%" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="86" cy="90" r="52" fill="none" stroke="#2D2D2A" stroke-width="1.2"/>
+        <circle cx="86" cy="90" r="38" fill="none" stroke="#2D2D2A" stroke-width="0.9"/>
+        <circle cx="86" cy="90" r="24" fill="none" stroke="#2D2D2A" stroke-width="0.7"/>
+        <line x1="32" y1="90" x2="68" y2="90" stroke="#2D2D2A" stroke-width="0.7"/>
+        <line x1="104" y1="90" x2="140" y2="90" stroke="#2D2D2A" stroke-width="0.7"/>
+        <line x1="86" y1="36" x2="86" y2="72" stroke="#2D2D2A" stroke-width="0.7"/>
+        <line x1="86" y1="108" x2="86" y2="144" stroke="#2D2D2A" stroke-width="0.7"/>
+        <circle cx="86" cy="38" r="1.3" fill="#2D2D2A"/>
+        <circle cx="86" cy="142" r="1.3" fill="#2D2D2A"/>
+        <circle cx="34" cy="90" r="1.3" fill="#2D2D2A"/>
+        <circle cx="138" cy="90" r="1.3" fill="#2D2D2A"/>
+        <circle cx="86" cy="90" r="5" fill="#B85C20"/>
+        <text x="188" y="80" font-family="Outfit" font-weight="800" font-size="26" letter-spacing="-0.5" fill="#2D2D2A">MedMasters</text>
+        <text x="188" y="110" font-family="Outfit" font-weight="500" font-size="26" letter-spacing="-0.3" fill="#B85C20">Method</text>
+        <text x="188" y="132" font-family="Manrope" font-weight="500" font-size="9" letter-spacing="2.4" fill="#2D2D2A">THE PRACTICE OF DESIGNING PRECISION LEARNING</text>
+      </svg>
+    </div>
+    <div class="brand-details">
+      <div class="brand-top">
+        <div class="brand-tier">Tier III, Method, for Peers</div>
+        <div class="brand-full-name">MedMasters Method</div>
+        <div class="brand-full-audience">Disciplined, architectural, rigorous</div>
+      </div>
+      <div class="spec-row"><span class="spec-k">Mark</span><span class="spec-v">Precision compass, thin-line concentric</span></div>
+      <div class="spec-row"><span class="spec-k">Display</span><span class="spec-v" style="font-family:Outfit;font-weight:800;">Outfit ExtraBold 800</span></div>
+      <div class="spec-row"><span class="spec-k">Body</span><span class="spec-v">Outfit + Manrope</span></div>
+      <div class="spec-row"><span class="spec-k">Paper</span><span class="spec-v">Stone #EFEAE0</span></div>
+      <div class="spec-row"><span class="spec-k">Accent</span><span class="spec-v">Burnt sienna</span></div>
+      <div class="spec-row"><span class="spec-k">Palette</span><span class="spec-v">
+        <span class="mini-palette">
+          <div style="background:#2D2D2A;"></div>
+          <div style="background:#B85C20;"></div>
+          <div style="background:#7A8574;"></div>
+          <div style="background:#EFEAE0;border:1px solid rgba(0,0,0,0.08);"></div>
+        </span>
+      </span></div>
+      <div class="spec-row"><span class="spec-k">Tagline</span><span class="spec-v">The practice of designing precision learning</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 SYSTEMS -->
+<section>
+  <div class="section-head">
+    <span class="section-num">04</span>
+    <span class="section-label">Systems</span>
+  </div>
+  <h2>Typography, color, <strong>mark</strong>.</h2>
+  <p class="section-deck">Three system references. Typography across the family, the full color library, and the mark grid that shows how each brand honors the rule of three.</p>
+
+  <!-- TYPOGRAPHY + COLOR -->
+  <div class="systems-grid" style="margin-bottom:20px;">
+    <div class="system-card">
+      <h3>Typography system</h3>
+      <div class="type-row">
+        <div class="type-meta">Collaborative &amp; Method, Display</div>
+        <div class="type-sample" style="font-family:Outfit; font-weight:800; font-size:28px; letter-spacing:-0.5px;">Outfit ExtraBold</div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta">Collaborative &amp; Method, Tagline</div>
+        <div class="type-sample" style="font-family:Manrope; font-weight:500; font-size:13px; letter-spacing:2.5px;">MANROPE MEDIUM, LETTERSPACED</div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta">Launch Studio, Display</div>
+        <div class="type-sample" style="font-family:'Bebas Neue'; font-size:30px; letter-spacing:2px;">BEBAS NEUE</div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta">Launch Studio, Body &amp; Tagline</div>
+        <div class="type-sample" style="font-family:'DM Sans'; font-weight:500; font-size:14px;">DM Sans, Medium and Regular</div>
+      </div>
+    </div>
+
+    <div class="system-card">
+      <h3>Color system</h3>
+
+      <div class="color-section">
+        <div class="color-section-label">Anchor (all brands)</div>
+        <div class="color-grid" style="grid-template-columns:repeat(1,1fr); max-width:160px;">
+          <div class="color-cell">
+            <div class="color-swatch" style="background:#0B1F3A;"></div>
+            <div class="color-name">Navy</div>
+            <div class="color-hex">#0B1F3A</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="color-section">
+        <div class="color-section-label">Collaborative</div>
+        <div class="color-grid">
+          <div class="color-cell"><div class="color-swatch" style="background:#C56B51;"></div><div class="color-name">Terra cotta</div><div class="color-hex">#C56B51</div></div>
+          <div class="color-cell"><div class="color-swatch" style="background:#8FA68E;"></div><div class="color-name">Sage</div><div class="color-hex">#8FA68E</div></div>
+          <div class="color-cell"><div class="color-swatch" style="background:#C9A961;"></div><div class="color-name">Gold</div><div class="color-hex">#C9A961</div></div>
+          <div class="color-cell"><div class="color-swatch" style="background:#F8F5EE;border:1px solid rgba(0,0,0,0.08);"></div><div class="color-name">Cream</div><div class="color-hex">#F8F5EE</div></div>
+        </div>
+      </div>
+
+      <div class="color-section">
+        <div class="color-section-label">Launch Studio</div>
+        <div class="color-grid">
+          <div class="color-cell"><div class="color-swatch" style="background:#1A2B45;"></div><div class="color-name">Navy</div><div class="color-hex">#1A2B45</div></div>
+          <div class="color-cell"><div class="color-swatch" style="background:#C85A3D;"></div><div class="color-name">Terracotta</div><div class="color-hex">#C85A3D</div></div>
+          <div class="color-cell"><div class="color-swatch" style="background:#F7F3EC;border:1px solid rgba(0,0,0,0.08);"></div><div class="color-name">Off-white</div><div class="color-hex">#F7F3EC</div></div>
+          <div class="color-cell"></div>
+        </div>
+      </div>
+
+      <div class="color-section">
+        <div class="color-section-label">Method</div>
+        <div class="color-grid">
+          <div class="color-cell"><div class="color-swatch" style="background:#2D2D2A;"></div><div class="color-name">Graphite</div><div class="color-hex">#2D2D2A</div></div>
+          <div class="color-cell"><div class="color-swatch" style="background:#B85C20;"></div><div class="color-name">Sienna</div><div class="color-hex">#B85C20</div></div>
+          <div class="color-cell"><div class="color-swatch" style="background:#7A8574;"></div><div class="color-name">Sage</div><div class="color-hex">#7A8574</div></div>
+          <div class="color-cell"><div class="color-swatch" style="background:#EFEAE0;border:1px solid rgba(0,0,0,0.08);"></div><div class="color-name">Stone</div><div class="color-hex">#EFEAE0</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MARK SYSTEM: all three together -->
+  <div class="mark-trio">
+    <div class="mark-cell">
+      <svg viewBox="0 0 180 180" width="140" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <clipPath id="mtA"><circle cx="78" cy="56" r="42"/></clipPath>
+          <clipPath id="mtB"><circle cx="118" cy="106" r="42"/></clipPath>
+        </defs>
+        <circle cx="78" cy="56" r="42" fill="#CC7C65"/>
+        <circle cx="118" cy="106" r="42" fill="#9CB09B"/>
+        <circle cx="58" cy="106" r="42" fill="#273951"/>
+        <g clip-path="url(#mtA)"><circle cx="118" cy="106" r="42" fill="#96A189"/></g>
+        <g clip-path="url(#mtA)"><circle cx="58" cy="106" r="42" fill="#212A3F"/></g>
+        <g clip-path="url(#mtB)"><circle cx="58" cy="106" r="42" fill="#1B3045"/></g>
+        <g clip-path="url(#mtA)"><g clip-path="url(#mtB)"><circle cx="58" cy="106" r="42" fill="#1B2E43"/></g></g>
+        <circle cx="85" cy="92" r="5" fill="#C9A961"/>
+      </svg>
+      <div class="m-name">Collaborative</div>
+      <div class="m-type">Three overlapping circles</div>
+    </div>
+
+    <div class="mark-cell">
+      <svg viewBox="0 0 180 180" width="140" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="30,140 76,36 122,140" fill="#1A2B45"/>
+        <polygon points="54,148 100,44 146,148" fill="#C85A3D" opacity="0.92"/>
+        <polygon points="74,156 120,52 166,156" fill="#C85A3D" opacity="0.5"/>
+      </svg>
+      <div class="m-name">Launch Studio</div>
+      <div class="m-type">Three ascending triangles</div>
+    </div>
+
+    <div class="mark-cell">
+      <svg viewBox="0 0 180 180" width="140" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="90" cy="90" r="62" fill="none" stroke="#2D2D2A" stroke-width="1.4"/>
+        <circle cx="90" cy="90" r="44" fill="none" stroke="#2D2D2A" stroke-width="1.1"/>
+        <circle cx="90" cy="90" r="26" fill="none" stroke="#2D2D2A" stroke-width="0.9"/>
+        <line x1="22" y1="90" x2="70" y2="90" stroke="#2D2D2A" stroke-width="0.9"/>
+        <line x1="110" y1="90" x2="158" y2="90" stroke="#2D2D2A" stroke-width="0.9"/>
+        <line x1="90" y1="22" x2="90" y2="70" stroke="#2D2D2A" stroke-width="0.9"/>
+        <line x1="90" y1="110" x2="90" y2="158" stroke="#2D2D2A" stroke-width="0.9"/>
+        <circle cx="90" cy="24" r="1.6" fill="#2D2D2A"/>
+        <circle cx="90" cy="156" r="1.6" fill="#2D2D2A"/>
+        <circle cx="24" cy="90" r="1.6" fill="#2D2D2A"/>
+        <circle cx="156" cy="90" r="1.6" fill="#2D2D2A"/>
+        <circle cx="90" cy="90" r="6" fill="#B85C20"/>
+      </svg>
+      <div class="m-name">Method</div>
+      <div class="m-type">Three concentric rings</div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 WHEN TO USE WHICH -->
+<section>
+  <div class="section-head">
+    <span class="section-num">05</span>
+    <span class="section-label">When to Use Which</span>
+  </div>
+  <h2>Pick a brand by <strong>audience</strong>, not topic.</h2>
+  <p class="section-deck">The easiest way to know which brand a piece of work belongs to: who's buying. If a learner is buying a course, it's Collaborative. If a client is hiring you to build something, it's Launch Studio. If a peer is paying to learn your method, it's Method. The topic could be the same across all three; the audience is what routes it.</p>
+
+  <div class="usage-grid">
+    <div class="usage-card col">
+      <h4>MedMasters Collaborative</h4>
+      <div class="u-tagline">Learning layered by design &middot; Built for teams</div>
+      <ul>
+        <li>Own-branded courses: Respiratory, Heart, Metabolic Edge, Critical Care</li>
+        <li>Clinical simulators and interactive tools</li>
+        <li>Board review content (NPLEX)</li>
+        <li>Kajabi-hosted catalog of learner-facing products</li>
+        <li>Student and learner communications</li>
+      </ul>
+    </div>
+
+    <div class="usage-card ls">
+      <h4>MedMasters Launch Studio</h4>
+      <div class="u-tagline">Built to ship</div>
+      <ul>
+        <li>Client course builds for other educators</li>
+        <li>Business websites for clinical practices and small businesses</li>
+        <li>Custom AI tooling for practitioners</li>
+        <li>NFC cards, email sequences, Kajabi setups</li>
+        <li>Anything you're building <em>for</em> someone else</li>
+      </ul>
+    </div>
+
+    <div class="usage-card mtd">
+      <h4>MedMasters Method</h4>
+      <div class="u-tagline">The practice of designing precision learning</div>
+      <ul>
+        <li>Cohort course on your learning design method</li>
+        <li>Self-paced "Learning Architecture" program</li>
+        <li>Template and toolkit library for educators</li>
+        <li>Professional certification, when ready</li>
+        <li>Licensing of frameworks to other teaching faculty</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>MedMasters Brand Family Reference, v1.0, April 2026</span>
+  <span>MedMasters Collaborative, LLC</span>
+</footer>
+
+</div>
+</body>
+</html>
