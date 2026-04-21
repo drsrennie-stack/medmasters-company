@@ -3,35 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MedMasters, Brand Family Reference</title>
+<title>MedMasters, Brand Family Reference v1.1</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&family=Manrope:wght@400;500;600;700&family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    /* Anchor navy used across all three */
     --anchor-navy: #0B1F3A;
 
-    /* Collaborative palette */
     --col-navy: #0B1F3A;
     --col-terra: #C56B51;
     --col-sage: #8FA68E;
     --col-gold: #C9A961;
     --col-cream: #F8F5EE;
 
-    /* Launch Studio palette */
     --ls-navy: #1A2B45;
-    --ls-terra: #C85A3D;
+    --ls-gold: #C9A961;
+    --ls-gold-deep: #A8882E;
+    --ls-stone: #B5AB9A;
     --ls-offwhite: #F7F3EC;
 
-    /* Method palette */
     --mtd-graphite: #2D2D2A;
     --mtd-sienna: #B85C20;
     --mtd-sage: #7A8574;
     --mtd-stone: #EFEAE0;
     --mtd-paper: #F5F0E4;
 
-    /* Document neutrals */
     --doc-bg: #F8F5EE;
     --doc-ink: #1C1C1C;
     --doc-white: #FFFFFF;
@@ -50,7 +47,6 @@
 
   .wrap { max-width: 1180px; margin: 0 auto; }
 
-  /* HERO */
   .hero {
     margin-bottom: 56px;
     padding-bottom: 40px;
@@ -108,7 +104,6 @@
     line-height: 1.5;
   }
 
-  /* TOC */
   .toc {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -135,7 +130,6 @@
     letter-spacing: 1px;
   }
 
-  /* SECTION */
   section { margin-bottom: 72px; }
 
   .section-head {
@@ -182,7 +176,6 @@
     margin-bottom: 32px;
   }
 
-  /* LEGAL / STRUCTURE STRIP */
   .structure-strip {
     background: var(--anchor-navy);
     color: var(--doc-white);
@@ -242,7 +235,6 @@
     color: var(--doc-white);
   }
 
-  /* DNA grid */
   .dna-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -284,7 +276,6 @@
     line-height: 1.5;
   }
 
-  /* BRAND FULL CARDS */
   .brand-full {
     border-radius: 14px;
     overflow: hidden;
@@ -330,7 +321,7 @@
     margin-bottom: 4px;
   }
   .brand-full.col .brand-tier { color: var(--col-terra); }
-  .brand-full.ls .brand-tier { color: var(--ls-terra); }
+  .brand-full.ls .brand-tier { color: var(--ls-gold-deep); }
   .brand-full.mtd .brand-tier { color: var(--mtd-sienna); }
 
   .brand-full-name {
@@ -385,7 +376,6 @@
   }
   .mini-palette div { flex: 1; }
 
-  /* SYSTEMS GRID */
   .systems-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -456,9 +446,7 @@
     color: var(--doc-ink);
   }
 
-  .color-section {
-    margin-bottom: 20px;
-  }
+  .color-section { margin-bottom: 20px; }
   .color-section:last-child { margin-bottom: 0; }
   .color-section-label {
     font-family: 'Manrope', sans-serif;
@@ -470,7 +458,6 @@
     margin-bottom: 8px;
   }
 
-  /* MARK SYSTEM */
   .mark-trio {
     background: var(--doc-white);
     border-radius: 12px;
@@ -511,7 +498,6 @@
     text-transform: uppercase;
   }
 
-  /* USAGE */
   .usage-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -528,7 +514,7 @@
     border-top: 4px solid;
   }
   .usage-card.col { border-top-color: var(--col-terra); }
-  .usage-card.ls { border-top-color: var(--ls-terra); }
+  .usage-card.ls { border-top-color: var(--ls-gold-deep); }
   .usage-card.mtd { border-top-color: var(--mtd-sienna); }
 
   .usage-card h4 {
@@ -573,7 +559,6 @@
     background: var(--col-gold);
   }
 
-  /* FOOTER */
   footer {
     margin-top: 64px;
     padding-top: 28px;
@@ -592,11 +577,10 @@
 <body>
 <div class="wrap">
 
-<!-- HERO -->
 <section class="hero">
   <div class="meta-row">
     <span class="doc-id">Brand Family Reference</span>
-    <span class="doc-version">Version 1.0, April 2026</span>
+    <span class="doc-version">Version 1.1, April 2026</span>
   </div>
 
   <h1>MedMasters,<br>a family of <em>three voices.</em></h1>
@@ -660,12 +644,12 @@
     <div class="dna-card">
       <div class="dna-n">ii</div>
       <h4>Navy as anchor</h4>
-      <p>Deep navy appears in every brand. Dominant in Collaborative, supporting in Launch Studio, quiet in Method. The through-line color.</p>
+      <p>Deep navy appears in every brand. Dominant in Collaborative, commanding in Launch Studio, quiet in Method. The through-line color.</p>
     </div>
     <div class="dna-card">
       <div class="dna-n">iii</div>
       <h4>Rule of three</h4>
-      <p>Each mark uses three primary elements. Three circles, three triangles, three concentric rings. Different shapes, same grammar.</p>
+      <p>Each mark uses three primary elements. Three circles, three propeller blades, three concentric rings. Different shapes, same grammar.</p>
     </div>
     <div class="dna-card">
       <div class="dna-n">iv</div>
@@ -733,15 +717,17 @@
     </div>
   </div>
 
-  <!-- LAUNCH STUDIO -->
+  <!-- LAUNCH STUDIO, UPDATED WITH PROPELLER -->
   <div class="brand-full ls">
     <div class="brand-showcase">
       <svg viewBox="0 0 520 180" width="100%" xmlns="http://www.w3.org/2000/svg">
-        <polygon points="40,138 80,54 120,138" fill="#1A2B45"/>
-        <polygon points="60,146 100,62 140,146" fill="#C85A3D" opacity="0.92"/>
-        <polygon points="80,154 120,70 160,154" fill="#C85A3D" opacity="0.5"/>
+        <g transform="translate(88, 90)">
+          <polygon points="0,0 -20,-50 20,-50" fill="#1A2B45"/>
+          <polygon points="0,0 -20,-50 20,-50" fill="#C9A961" transform="rotate(120)"/>
+          <polygon points="0,0 -20,-50 20,-50" fill="#B5AB9A" transform="rotate(240)"/>
+        </g>
         <text x="188" y="80" font-family="Bebas Neue" font-size="34" letter-spacing="2.5" fill="#1A2B45">MEDMASTERS</text>
-        <text x="188" y="112" font-family="Bebas Neue" font-size="34" letter-spacing="2.5" fill="#C85A3D">LAUNCH STUDIO</text>
+        <text x="188" y="112" font-family="Bebas Neue" font-size="34" letter-spacing="2.5" fill="#A8882E">LAUNCH STUDIO</text>
         <text x="188" y="132" font-family="DM Sans" font-weight="600" font-size="9" letter-spacing="2.8" fill="#1A2B45">BUILT TO SHIP</text>
       </svg>
     </div>
@@ -749,17 +735,18 @@
       <div class="brand-top">
         <div class="brand-tier">Tier II, Services, for Clients</div>
         <div class="brand-full-name">MedMasters Launch Studio</div>
-        <div class="brand-full-audience">Light, confident, ready to start</div>
+        <div class="brand-full-audience">Direct, confident, ready to ship</div>
       </div>
-      <div class="spec-row"><span class="spec-k">Mark</span><span class="spec-v">Three ascending triangles</span></div>
+      <div class="spec-row"><span class="spec-k">Mark</span><span class="spec-v">Three-bladed propeller</span></div>
       <div class="spec-row"><span class="spec-k">Display</span><span class="spec-v" style="font-family:'Bebas Neue'; letter-spacing:1px; font-size:15px;">BEBAS NEUE</span></div>
       <div class="spec-row"><span class="spec-k">Body</span><span class="spec-v" style="font-family:'DM Sans';">DM Sans</span></div>
       <div class="spec-row"><span class="spec-k">Paper</span><span class="spec-v">Warm off-white #F7F3EC</span></div>
-      <div class="spec-row"><span class="spec-k">Accent</span><span class="spec-v">Terracotta</span></div>
+      <div class="spec-row"><span class="spec-k">Accent</span><span class="spec-v">Gold + stone</span></div>
       <div class="spec-row"><span class="spec-k">Palette</span><span class="spec-v">
         <span class="mini-palette">
           <div style="background:#1A2B45;"></div>
-          <div style="background:#C85A3D;"></div>
+          <div style="background:#C9A961;"></div>
+          <div style="background:#B5AB9A;"></div>
           <div style="background:#F7F3EC;border:1px solid rgba(0,0,0,0.08);"></div>
         </span>
       </span></div>
@@ -821,7 +808,6 @@
   <h2>Typography, color, <strong>mark</strong>.</h2>
   <p class="section-deck">Three system references. Typography across the family, the full color library, and the mark grid that shows how each brand honors the rule of three.</p>
 
-  <!-- TYPOGRAPHY + COLOR -->
   <div class="systems-grid" style="margin-bottom:20px;">
     <div class="system-card">
       <h3>Typography system</h3>
@@ -871,9 +857,9 @@
         <div class="color-section-label">Launch Studio</div>
         <div class="color-grid">
           <div class="color-cell"><div class="color-swatch" style="background:#1A2B45;"></div><div class="color-name">Navy</div><div class="color-hex">#1A2B45</div></div>
-          <div class="color-cell"><div class="color-swatch" style="background:#C85A3D;"></div><div class="color-name">Terracotta</div><div class="color-hex">#C85A3D</div></div>
+          <div class="color-cell"><div class="color-swatch" style="background:#C9A961;"></div><div class="color-name">Gold</div><div class="color-hex">#C9A961</div></div>
+          <div class="color-cell"><div class="color-swatch" style="background:#B5AB9A;"></div><div class="color-name">Stone</div><div class="color-hex">#B5AB9A</div></div>
           <div class="color-cell"><div class="color-swatch" style="background:#F7F3EC;border:1px solid rgba(0,0,0,0.08);"></div><div class="color-name">Off-white</div><div class="color-hex">#F7F3EC</div></div>
-          <div class="color-cell"></div>
         </div>
       </div>
 
@@ -889,7 +875,7 @@
     </div>
   </div>
 
-  <!-- MARK SYSTEM: all three together -->
+  <!-- MARK SYSTEM: all three FINAL marks together -->
   <div class="mark-trio">
     <div class="mark-cell">
       <svg viewBox="0 0 180 180" width="140" xmlns="http://www.w3.org/2000/svg">
@@ -912,12 +898,14 @@
 
     <div class="mark-cell">
       <svg viewBox="0 0 180 180" width="140" xmlns="http://www.w3.org/2000/svg">
-        <polygon points="30,140 76,36 122,140" fill="#1A2B45"/>
-        <polygon points="54,148 100,44 146,148" fill="#C85A3D" opacity="0.92"/>
-        <polygon points="74,156 120,52 166,156" fill="#C85A3D" opacity="0.5"/>
+        <g transform="translate(90, 90)">
+          <polygon points="0,0 -24,-60 24,-60" fill="#1A2B45"/>
+          <polygon points="0,0 -24,-60 24,-60" fill="#C9A961" transform="rotate(120)"/>
+          <polygon points="0,0 -24,-60 24,-60" fill="#B5AB9A" transform="rotate(240)"/>
+        </g>
       </svg>
       <div class="m-name">Launch Studio</div>
-      <div class="m-type">Three ascending triangles</div>
+      <div class="m-type">Three-bladed propeller</div>
     </div>
 
     <div class="mark-cell">
@@ -990,7 +978,7 @@
 </section>
 
 <footer>
-  <span>MedMasters Brand Family Reference, v1.0, April 2026</span>
+  <span>MedMasters Brand Family Reference, v1.1, April 2026</span>
   <span>MedMasters Collaborative, LLC</span>
 </footer>
 
